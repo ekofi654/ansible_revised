@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    
+  - name: install firefox package
+    ansible.builtin.dnf:
+      name: firefox*
+      state: latest  
+
+  - name: install usbguard package
+    ansible.builtin.dnf:
+      name: usbguard*
+      state: latest 

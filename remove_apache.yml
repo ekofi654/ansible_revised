@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    
+  - name: remove firefox
+    ansible.builtin.dnf:
+      name: firefox
+      state: absent  
+      
+  - name: remove apache2 package
+    ansible.builtin.dnf:
+      name: apache2
+      state: absent
+
+  - name: remove support for php
+    ansible.builtin.dnf:
+      name: php
+      state: absent 
